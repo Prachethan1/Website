@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <style>
+
+header{
+background-color: #5e057e;
+color:white;
+}
+nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+.nav-bar .ul .li1 {
+display:inline;
+}
+ul{
+color:white;
+}
+
+/* Dark mode styles */
+        .dark-mode header {
+            background-color: #fff; /* Dark background color */
+            color: white; /* Light text color */
+        }
+
+        .dark-mode nav ul li a {
+            color: white; /* Light link color */
+        }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+    <div class="nav-bar">
+    <nav>
+        <div class="ul">
+        <ul>
+            <div class="l1"><li><a href="/">index</a></li></div>
+            <div class="l1"><li><a href="/login">Login</a></li></div>
+            <div class="l1"><li><a href="/signup">Signup</a></li></div>
+            <div class="l1"><li><button id="darkModeToggle">Dark Mode</button></li></div>
+        </ul>
+        </div>
+    </nav>
+    </div>
+</header>
+</div>
+<script>
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+});
+</script>
+</body>
+</html>
