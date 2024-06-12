@@ -32,6 +32,26 @@
 }
 
 
+
+header{
+<!--background-color: #5e057e;-->
+color:white;
+}
+nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+.nav-bar .ul .li1 {
+display:inline;
+}
+ul{
+display:flex;
+flex-direction:row;
+justify-content:space-evenly;
+color:white;
+}
+
  </style>
 </head>
 
@@ -43,6 +63,28 @@
         <h2 th:text="${userdetail.fullname}" class="dashboard__user-name">User's Name</h2>
     </div>
 </div>
+
+
+
+<div class="container">
+    <header>
+        <div class="nav-bar">
+            <nav>
+                <div class="ul">
+                    <ul>
+                        <div class="l1"><li><a href="/index">index</a></li></div>
+                        <div class="l1"><li><a href="/login">Login</a></li></div>
+                        <div class="l1"><li><a href="/register">Signup</a></li></div>
+<!--                        <div class="l1"><li><button id="darkModeToggle">Dark Mode</button></li></div>-->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+</div>
+
+
+
 <span sec:authorize="isAuthenticated"><a th:href="@{/logout}">Logout</a></span>
 </body>
 </html>
